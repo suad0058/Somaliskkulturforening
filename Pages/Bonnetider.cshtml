@@ -1,0 +1,56 @@
+@page
+@model Bonnetider
+@{
+    ViewData["Title"] = "Bønnetider";
+}
+
+<section class="bonnetider-section">
+    <div class="container">
+        <p class="section-label">Salah</p>
+        <h2 class="section-title">Bønnetider</h2>
+        <p class="prayer-intro">Bønnetider beregnet automatisk for Odense, Danmark.</p>
+
+        <div class="prayer-grid">
+            <div class="prayer-card">
+                <div class="prayer-arabic">الفجر</div>
+                <div class="prayer-name">Fajr</div>
+                <div class="prayer-time">@Model.Fajr</div>
+                <div class="prayer-note">Morgenbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">الشروق</div>
+                <div class="prayer-name">Shuruk</div>
+                <div class="prayer-time">@Model.Shuruk</div>
+                <div class="prayer-note">Solopgang</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">الظهر</div>
+                <div class="prayer-name">Dhuhr</div>
+                <div class="prayer-time">@Model.Dhuhr</div>
+                <div class="prayer-note">Middagsbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">العصر</div>
+                <div class="prayer-name">Asr</div>
+                <div class="prayer-time">@Model.Asr</div>
+                <div class="prayer-note">Eftermiddagsbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">المغرب</div>
+                <div class="prayer-name">Maghrib</div>
+                <div class="prayer-time">@Model.Maghrib</div>
+                <div class="prayer-note">Solnedgang</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">العشاء</div>
+                <div class="prayer-name">Isha</div>
+                <div class="prayer-time">@Model.Isha</div>
+                <div class="prayer-note">Aftenbøn</div>
+            </div>
+        </div>
+
+        <div class="prayer-disclaimer">
+            ⚠️ Tiderne hentes automatisk fra Aladhan API og opdateres dagligt.
+        </div>
+    </div>
+</section>

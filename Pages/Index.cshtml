@@ -1,0 +1,278 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Forside";
+}
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-eyebrow">Somalisk Kulturforening — Odense</p>
+        <h1>Fællesskab,<br><span>Tro & Kultur</span></h1>
+        <p>Vi er en aktiv kulturforening, der arbejder for at styrke fællesskabet, bevare somalisk kultur og bygge bro mellem generationer.</p>
+        <div class="hero-cta">
+            <a href="#om" class="btn-primary">Lær os at kende</a>
+            <a href="#sadaqah" class="btn-outline">Støt vores arbejde</a>
+        </div>
+    </div>
+</section>
+
+<!-- OM OS -->
+<section id="om" class="om-section">
+    <div class="container">
+        <p class="section-label">Om foreningen</p>
+        <h2 class="section-title">Hvem er vi?</h2>
+        <p class="section-text">Vi er en somalisk kulturforening baseret i Danmark, der samler familier, unge og ældre om fælles værdier, traditioner og tro.</p>
+        <p class="section-text">Vores forening er bygget på principperne om omsorg for hinanden, bevarelse af vores kulturarv og aktivt medborgerskab i det danske samfund.</p>
+        <div class="om-values">
+            <div class="value-item">
+                <strong>🤝 Fællesskab</strong>
+                <span>Alle er velkomne – unge som ældre</span>
+            </div>
+            <div class="value-item">
+                <strong>🎭 Kultur</strong>
+                <span>Bevarelse af somalisk arv og sprog</span>
+            </div>
+            <div class="value-item">
+                <strong>🕌 Tro</strong>
+                <span>Islamisk vejledning og bønnetider</span>
+            </div>
+            <div class="value-item">
+                <strong>💛 Støtte</strong>
+                <span>Hjælp til nye i Danmark</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ARRANGEMENTER -->
+<section id="arrangementer" class="arrangementer-section">
+    <div class="container">
+        <p class="section-label">Kalender</p>
+        <h2 class="section-title">Kommende arrangementer</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-header">
+                    <div class="event-date">
+                        <div class="day">28</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <div class="event-title-group">
+                        <h3>Eid-forberedelse</h3>
+                        <p>📍 Foreningslokalet</p>
+                    </div>
+                </div>
+                <div class="event-body">
+                    <p>Fælles forberedelse til Eid med madlavning, udsmykning og hygge for hele familien.</p>
+                    <span class="event-tag">Familievenligt</span>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-header">
+                    <div class="event-date">
+                        <div class="day">05</div>
+                        <div class="month">Apr</div>
+                    </div>
+                    <div class="event-title-group">
+                        <h3>Somalisk sprogklub</h3>
+                        <p>📍 Online & fysisk</p>
+                    </div>
+                </div>
+                <div class="event-body">
+                    <p>Ugentlig samling for børn og unge der vil lære eller forbedre deres somaliske sprog.</p>
+                    <span class="event-tag">Ungdom</span>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="event-header">
+                    <div class="event-date">
+                        <div class="day">12</div>
+                        <div class="month">Apr</div>
+                    </div>
+                    <div class="event-title-group">
+                        <h3>Fundraiser middag</h3>
+                        <p>📍 Festsalen</p>
+                    </div>
+                </div>
+                <div class="event-body">
+                    <p>Stor fællesspisning til støtte for moskébyggeriet. Somalisk mad og underholdning.</p>
+                    <span class="event-tag">Moské-fund</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BØNNETIDER -->
+<section id="bonnetider" class="bonnetider-section">
+    <div class="container">
+        <p class="section-label">Salah</p>
+        <h2 class="section-title">Bønnetider</h2>
+        <p class="prayer-intro">Daglige bønnetider opdateres månedligt. Tiderne varierer med årstiden.</p>
+        <div class="prayer-grid">
+            <div class="prayer-card">
+                <div class="prayer-arabic">الفجر</div>
+                <div class="prayer-name">Fajr</div>
+                <div class="prayer-time" id="fajr">...</div>
+                <div class="prayer-note">Morgenbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">الشروق</div>
+                <div class="prayer-name">Shuruk</div>
+                <div class="prayer-time" id="shuruk">...</div>
+                <div class="prayer-note">Solopgang</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">الظهر</div>
+                <div class="prayer-name">Dhuhr</div>
+                <div class="prayer-time" id="dhuhr">...</div>
+                <div class="prayer-note">Middagsbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">العصر</div>
+                <div class="prayer-name">Asr</div>
+                <div class="prayer-time" id="asr">...</div>
+                <div class="prayer-note">Eftermiddagsbøn</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">المغرب</div>
+                <div class="prayer-name">Maghrib</div>
+                <div class="prayer-time" id="maghrib">...</div>
+                <div class="prayer-note">Solnedgang</div>
+            </div>
+            <div class="prayer-card">
+                <div class="prayer-arabic">العشاء</div>
+                <div class="prayer-name">Isha</div>
+                <div class="prayer-time" id="isha">...</div>
+                <div class="prayer-note">Aftenbøn</div>
+            </div>
+        </div>
+        <div class="prayer-disclaimer">
+            ⚠️ Tiderne er vejledende og beregnet for Danmark. Opdateres månedligt af foreningen.
+        </div>
+    </div>
+</section>
+
+<!-- SADAQAH -->
+<section id="sadaqah" class="sadaqah-section">
+    <div class="container">
+        <p class="section-label">Donationer</p>
+        <h2 class="section-title">Sadaqah – giv af dit bedste</h2>
+        <div class="sadaqah-grid">
+            <div class="sadaqah-text">
+                <p class="sadaqah-desc">Sadaqah er en af islams smukkeste handlinger – at give frivilligt for Allahs skyld. Dine bidrag går direkte til foreningens aktiviteter og byggefonden til vores moské.</p>
+                <div class="bank-info">
+                    <h4>Bankoverførsel</h4>
+                    <div class="bank-row"><span class="lbl">Bank</span><span class="val">Indsæt banknavn</span></div>
+                    <div class="bank-row"><span class="lbl">Reg. nr.</span><span class="val">XXXX</span></div>
+                    <div class="bank-row"><span class="lbl">Konto nr.</span><span class="val">XXXXXXXXXX</span></div>
+                    <div class="bank-row"><span class="lbl">MobilePay</span><span class="val">#XXXXX</span></div>
+                </div>
+            </div>
+            <div class="hadith-card">
+                <blockquote>"Den der giver sadaqah, ser sin formue ikke mindsket."</blockquote>
+                <cite>— Sahih Muslim</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MOSKÉ -->
+<section id="moske" class="moske-section">
+    <div class="container">
+        <p class="section-label">Byggeprojekt</p>
+        <h2 class="section-title">Vores nye moské</h2>
+        <div class="moske-hero">
+            <h3>Hjælp os med at bygge et hus for vores fællesskab</h3>
+            <p>Vi er i gang med at realisere drømmen om en moské, der kan rumme hele vores menighed.</p>
+            <div class="progress-section">
+                <div class="progress-label">
+                    <span>Indsamlet så langt</span>
+                    <strong>423.500 kr af 1.500.000 kr</strong>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 28%"></div>
+                </div>
+            </div>
+            <div class="moske-stats">
+                <div class="moske-stat"><div class="num">287</div><div class="lbl">Bidragydere</div></div>
+                <div class="moske-stat"><div class="num">2026</div><div class="lbl">Målår</div></div>
+                <div class="moske-stat"><div class="num">500m²</div><div class="lbl">Planlagt areal</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERI -->
+<section id="galleri" class="galleri-section">
+    <div class="container">
+        <p class="section-label">Billeder</p>
+        <h2 class="section-title">Galleri</h2>
+        <p class="section-text">Glimt fra vores arrangementer og fællesskab.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item large">📷</div>
+            <div class="gallery-item">📷</div>
+            <div class="gallery-item">📷</div>
+            <div class="gallery-item">📷</div>
+            <div class="gallery-item">📷</div>
+            <div class="gallery-item">📷</div>
+            <div class="gallery-item">📷</div>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="kontakt-section">
+    <div class="container">
+        <p class="section-label">Skriv til os</p>
+        <h2 class="section-title">Kontakt foreningen</h2>
+        <div class="kontakt-grid">
+            <div class="kontakt-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div><h4>Adresse</h4><p>Egeparken 56, 5240 Odense NØ</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div><h4>Telefon</h4><p>+45 71 44 74 27</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div><h4>E-mail</h4><p>Suad12@live.dk</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div><h4>Åbningstider</h4><p>Mandag–Fredag: 16–20<br/>Weekend: 10–18</p></div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label>Navn</label>
+                    <input type="text" placeholder="Dit navn"/>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="din@@email.dk"/>
+                </div>
+                <div class="form-group">
+                    <label>Besked</label>
+                    <textarea placeholder="Skriv din besked her..."></textarea>
+                </div>
+                <button class="btn-submit">Send besked →</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    fetch('https://api.aladhan.com/v1/timings/@DateTime.Now.Day-@DateTime.Now.Month-@DateTime.Now.Year?latitude=55.3959&longitude=10.3883&method=3')
+        .then(res => res.json())
+        .then(data => {
+            const t = data.data.timings;
+            document.getElementById('fajr').textContent = t.Fajr;
+            document.getElementById('shuruk').textContent = t.Sunrise;
+            document.getElementById('dhuhr').textContent = t.Dhuhr;
+            document.getElementById('asr').textContent = t.Asr;
+            document.getElementById('maghrib').textContent = t.Maghrib;
+            document.getElementById('isha').textContent = t.Isha;
+        });
+</script>
+</section>

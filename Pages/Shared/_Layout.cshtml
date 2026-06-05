@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Kulturforening</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+</head>
+<body>
+
+<nav>
+    <a class="nav-logo" asp-page="/Index">☽ Kulturforeningen</a>
+    <ul class="nav-links">
+        <li><a href="/#om">Om os</a></li>
+        <li><a href="/#arrangementer">Arrangementer</a></li>
+        <li><a href="/#bonnetider">Bønnetider</a></li>
+        <li><a href="/#sadaqah">Sadaqah</a></li>
+        <li><a href="/#moske">Moské</a></li>
+        <li><a href="/#galleri">Galleri</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    @RenderBody()
+</main>
+
+<footer>
+    <div class="footer-bottom">
+        <span>© 2026 Somalisk Kulturforening</span>
+    </div>
+</footer>
+
+</body>
+</html>
